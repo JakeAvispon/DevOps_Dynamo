@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body {
+            background: #121212;
+            color: #c4b494;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+        }
+        .pergamino {
+            background: #e3d3a3;
+            border: 15px solid #3b2b1a;
+            color: #2b1a0a;
+            padding: 40px;
+            width: 80%;
+            box-shadow: 20px 20px 50px rgba(0,0,0,0.9);
+            border-style: double;
+        }
+        h1 { border-bottom: 3px solid #3b2b1a; text-align: center; font-variant: small-caps; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { background: #3b2b1a; color: #e3d3a3; padding: 10px; }
+        td { border-bottom: 1px solid #3b2b1a; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="pergamino">
+        <h1>📜 Censo de las Provincias de Tamriel 📜</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Provincia</th>
+                    <th>Clima (°C)</th>
+                    <th>Humedad</th>
+                    <th>Oro por Noche</th>
+                </tr>
+            </thead>
+            <tbody id="lista-estados">
+                </tbody>
+        </table>
+    </div>
+</body>
+</html>

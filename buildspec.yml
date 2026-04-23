@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - echo Instalando dependencias...
+      - pip install boto3 flask
+  pre_build:
+    commands:
+      - echo Validando archivos...
+  build:
+    commands:
+      - echo Transformando Estados.txt a JSON...
+      - python convertidor.py
+  post_build:
+    commands:
+      - echo Actualizando archivos en S3 y notificando a la EC2...
+      # Aquí el pipeline ya manda los archivos a S3 por el paso de Deploy.
+artifacts:
+  files:
+    - index.html
+    - estados_dynamo.json
+    - app.py
